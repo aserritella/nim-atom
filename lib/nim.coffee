@@ -275,7 +275,7 @@ module.exports =
       # For binding ctrl-shift-click
       editorSubscriptions = new SubAtom()
       editorElement = atom.views.getView(editor)
-      editorLines = editorElement.shadowRoot.querySelector '.lines'
+      editorLines = editorElement.querySelector '.lines'
 
       editorSubscriptions.add editorLines, 'mousedown', (e) =>
         return unless @options.ctrlShiftClickEnabled 
